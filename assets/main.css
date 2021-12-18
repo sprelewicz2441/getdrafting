@@ -61,6 +61,10 @@ video {
   height:  100%;
 }
 
+.error-message {
+  display:  none;
+}
+
 .form-wrapper {
   position: relative;
   color: #fff;

@@ -21,6 +21,7 @@
         <p>Create your own mock draft and see our experts picks.</p>
       </div>
       <div class="form-wrapper center" id="signup-form-wrapper">
+        <div class="error-message" id="form-error"></div>
         <form id="signup-form">
           <p>Sign up now to be alerted when Get Drafting goes live!</p>
           <input type="text" name="email">
@@ -53,6 +54,14 @@
               var para = document.createElement("P");
               para.innerText = "Sign up was successful. Thank you for your interest.";
               document.querySelector('#signup-form-wrapper').appendChild(para);   
+            } else if(response == 'Duplicate') {
+              elem = document.querySelector('#form-error');
+              elem.style.display = 'block';
+              elem.innerHTML = "<p>That email already is signed up</p>";
+            } else if(response == 'Invalid email format') {
+              elem = document.querySelector('#form-error');
+              elem.style.display = 'block';
+              elem.innerHTML = "<p>Not a valid email address</p>";
             }
           });
         });
