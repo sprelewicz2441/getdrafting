@@ -63,6 +63,8 @@ video {
 
 .error-message {
   display:  none;
+  font-size: small;
+  color:  red;
 }
 
 .form-wrapper {
