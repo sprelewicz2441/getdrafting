@@ -20,7 +20,9 @@ if(!empty($_POST['email'])) {
 
   $insert_sql->execute();
   if($insert_sql->error) {
-    echo $insert_sql->error;
+    if($insert_sql->errno === 1062) {
+      echo "Duplicate";
+    }
   } else {
     echo "Success";
   }
