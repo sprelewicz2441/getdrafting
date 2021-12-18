@@ -47,8 +47,8 @@
             method: "post"
           })
           .then(response => response.text())
-          .then(text => {
-            if(text == 'Success') {
+          .then(response => {
+            if(response == 'Success') {
               document.querySelector('#signup-form-wrapper').innerHTML = '';
               var para = document.createElement("P");
               para.innerText = "Sign up was successful. Thank you for your interest.";
