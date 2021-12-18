@@ -80,7 +80,7 @@ video {
   margin: 30px auto;
   background: rgb(46,74,104,.6);
   display: block;
-  height: 40vh;
+  height: auto;
   text-align: center;
 }
 
