@@ -23,7 +23,6 @@ if(!empty($_POST['email'])) {
     $insert_sql->execute();
   } catch (mysqli_sql_exception $e) {
     if($insert_sql->errno == 1062) {
-      echo $e;
       echo "Duplicate";
       exit();
     }
