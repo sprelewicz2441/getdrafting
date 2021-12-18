@@ -1,0 +1,119 @@
+body, html {
+  margin:  0;
+  height: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  background: #070E17;
+}
+
+
+/* Style the video: 100% width and height to cover the entire window */
+video {
+  object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+/* Add some content at the bottom of the video/page */
+.content {
+  position: relative;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+
+}
+
+.content h1 {
+  margin: 3px;
+  /* font-family: 'Playball', cursive; */
+  letter-spacing: 2px;
+  font-size: xxx-large;
+  color: #fff;
+  text-shadow: #fff 2px 0 4px;
+  line-height: .9;
+  -webkit-text-fill-color: white; /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+}
+
+.content p {
+  font-size: large;
+}
+
+.lighttext {
+  color: #F4F5FF;
+}
+
+.center {
+  margin: 0 auto;
+  width: 70%;
+  padding: 10px;
+}
+
+.pt20 {
+  padding-top: 20px;
+}
+
+#page-wrapper {
+  height:  100%;
+}
+
+.form-wrapper {
+  position: relative;
+  color: #fff;
+  font-size: x-large;
+  padding: 10px;
+  border: solid 1px #fff;
+  border-radius: 5px;
+  margin: 30px auto;
+  background: rgb(46,74,104,.6);
+  display: block;
+  height: 40vh;
+  text-align: center;
+}
+
+.form-wrapper input {
+  width: 90%;
+  height: 2em;
+}
+
+.form-button {
+  text-decoration: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  color: white;
+  display: inline-block;
+  padding: 0.4em 1em;
+  border: 0.1em solid #3e65b3;
+  border-radius: 0.38em;
+  background-image: linear-gradient(#62a6ed, #4b78d6); 
+  cursor: pointer;
+}
+
+.metatext {
+  font-size: medium;
+}
+
+a {
+  color: white;
+}
+
+.form-button:hover {
+  background-image: linear-gradient(rgb(26,175,238), rgb(4,132,217)); 
+}
+.button:active {
+  background-image: linear-gradient(rgb(3,155,218), rgb(3,110,197)); 
+}
+
+@media only screen 
+  and (min-device-width: 768px) {
+    .form-wrapper {
+      width:  50vw;
+      float: right;
+      margin-right:  25px;
+    }
+
+}
