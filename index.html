@@ -20,7 +20,7 @@
         <h1 class="pt20">Get Drafting!</h1>
         <p>Create your own mock draft and see our experts picks.</p>
       </div>
-      <div class="form-wrapper center">
+      <div class="form-wrapper center" id="signup-form-wrapper">
         <form id="signup-form">
           <p>Sign up now to be alerted when Get Drafting goes live!</p>
           <input type="text" name="email">
@@ -46,8 +46,15 @@
             body: formData,
             method: "post"
           })
-          .then(response => response.json())
-          .then(data => console.log(data));
+          .then(response => response.text())
+          .then(text => {
+            if(text == 'Success') {
+              document.querySelector('#signup-form-wrapper').innerHTML = '';
+              var para = document.createElement("P");
+              para.innerText = "Sign up was successful. Thank you for your interest.";
+              document.querySelector('#signup-form-wrapper').appendChild(para);   
+            }
+          });
         });
       });
     </script>

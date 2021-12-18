@@ -3,7 +3,8 @@
 if(!empty($_POST['email'])) {
   $email = $_POST['email'];
   if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-    return "Invalid email format";
+    echo "Invalid email format";
+    return 0;
   }
 
   $url = parse_url(getenv("CLEARDB_DATABASE_URL"));
