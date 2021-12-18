@@ -65,6 +65,9 @@ video {
   display:  none;
   font-size: small;
   color:  red;
+  background: white;
+  padding: 1px; 
+  border-radius: 5px;
 }
 
 .form-wrapper {
