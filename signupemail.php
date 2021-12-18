@@ -12,20 +12,24 @@ if(!empty($_POST['email'])) {
   $username = $url["user"];
   $password = $url["pass"];
   $db = substr($url["path"], 1);
+  mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
 
   $conn = new mysqli($server, $username, $password, $db);
   $insert_sql = $conn->init();
   $insert_sql = $conn->prepare("INSERT INTO email_signups SET email = ?");
   $insert_sql->bind_param('s', $email);
 
-  $insert_sql->execute();
-  if($insert_sql->error) {
-    if($insert_sql->errno === 1062) {
+  try {
+    $insert_sql->execute();
+  } catch (mysqli_sql_exception $e) {
+    if($insert_sql->errno == 1062) {
+      echo $e;
       echo "Duplicate";
+      exit();
     }
-  } else {
-    echo "Success";
   }
+    
+  echo "Success";
 }
 
 ?>
