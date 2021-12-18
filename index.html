@@ -21,11 +21,11 @@
         <p>Create your own mock draft and see our experts picks.</p>
       </div>
       <div class="form-wrapper center">
-        <form>
+        <form id="signup-form">
           <p>Sign up now to be alerted when Get Drafting goes live!</p>
           <input type="text" name="email">
           <div class="form-button-wrapper">
-            <button class="form-button">Sign Up</button>
+            <button class="form-button" id="signup-btn">Sign Up</button>
           </div>
            <p class="metatext">Presented by <a href="https://sunrisesportsreport.com/">Sunrise Sports Report</a> and <a href="https://rayonsports.com/">RayOnSports</a>.</p>
         </form>
@@ -34,6 +34,23 @@
 
       </footer>
     </div>
+    <script>
+      document.addEventListener('DOMContentLoaded', (event) => {
+        console.log('DOM fully loaded and parsed');
+        let btn = document.querySelector('#signup-btn');
+        btn.addEventListener('click',function(event) {
+          event.preventDefault();
+          let formData = new FormData(document.getElementById("signup-form"));
+    
+          fetch('signupemail.php', {
+            body: formData,
+            method: "post"
+          })
+          .then(response => response.json())
+          .then(data => console.log(data));
+        });
+      });
+    </script>
   </body>
 </html>
 
