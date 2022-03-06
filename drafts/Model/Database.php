@@ -10,8 +10,15 @@ class Database
     protected $connection = null;
  
     public function __construct() {
+        $url = parse_url(getenv("CLEARDB_DATABASE_URL"));
+        $server = $url["host"];
+        $username = $url["user"];
+        $password = $url["pass"];
+        $db = substr($url["path"], 1);
+        mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
+
         try {
-            $this->connection = new mysqli(DB_HOST, DB_USERNAME, DB_PASSWORD, DB_DATABASE_NAME);
+            $this->connection = new mysqli($server, $username, $password, $db);
          
             if ( mysqli_connect_errno()) {
                 throw new Exception("Could not connect to database.");   
