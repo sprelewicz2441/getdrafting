@@ -1,0 +1,113 @@
+@import 'shared.css';
+
+body, html {
+  margin:  0;
+  width: 100vw;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+.mocks-page-wrapper {
+  display:  grid;
+  width: 100vw;
+}
+
+.site-header {
+  background: #0A0442;
+  color:  white;
+  padding: 20px;
+}
+
+.site-header img {
+  width:  20vw;
+}
+
+.mock-header {
+  background: #0A0442;
+  color:  white;
+  text-align: center;
+  padding: 30px;
+}
+
+.mock-header .headline {
+  font-family: Roboto,Arial,sans-serif;
+  font-style: italic;
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: 13.5vw;
+  letter-spacing: .01em;
+  line-height: .9;
+}
+
+.mock-wrapper {
+  margin: 5px;
+}
+
+.slot-card {
+  border-radius: .625rem;
+  margin-bottom:  20px;
+  overflow: hidden;
+}
+
+.slot-header {
+  display: flex;
+  flex-direction: row;
+  background: #0A0442;
+}
+
+.slot-team {
+  background: silver;
+  border-radius: .625rem 0 0 0;
+  width: 50px;
+  margin: 5px;
+}
+
+.slot-team img {
+  width: inherit;
+}
+
+.player-name {
+  flex-grow:  2;
+  padding-left:  10px;
+}
+
+.player-position {
+  padding-right: 10px;
+}
+
+.player-info {
+  display: flex;
+  flex-direction: row;
+}
+
+.player-info > div {
+  flex: 1;
+  width: 100px;
+  text-align: center;
+  color: #8C0E0F;
+  font-weight: 700;
+}
+
+.player-profile {
+  padding:  10px;
+  font-weight: 500;
+  border: solid 1px #0A0442;  
+  border-radius: 0px 0px .625rem .625rem;
+}
+
+.gold {
+  color: gold;
+}
+
+/**** MEDIA QUERIES BELOW HERE *******/
+
+/* Big screen devices (889px and above) */
+@media only screen and (min-width: 889px) {
+ body {
+  max-width: 99%; 
+ }
+
+  .site-header img {
+    width:  10vw;
+  }
+
+}
