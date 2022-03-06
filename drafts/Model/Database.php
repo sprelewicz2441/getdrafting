@@ -15,7 +15,7 @@ class Database
         $username = $url["user"];
         $password = $url["pass"];
         $db = substr($url["path"], 1);
-        //mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
+        mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
 
         try {
             $this->connection = new mysqli($server, $username, $password, $db);
