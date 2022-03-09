@@ -18,8 +18,8 @@ class Database
         mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
 
         try {
-            //$this->connection = new mysqli($server, $username, $password, $db);
-            $this->connection = new mysqli(DB_HOST, DB_USERNAME, DB_PASSWORD, DB_DATABASE_NAME);
+            $this->connection = new mysqli($server, $username, $password, $db);
+            //$this->connection = new mysqli(DB_HOST, DB_USERNAME, DB_PASSWORD, DB_DATABASE_NAME);
          
             if ( mysqli_connect_errno()) {
                 throw new Exception("Could not connect to database."); 
