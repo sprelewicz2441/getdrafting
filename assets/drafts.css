@@ -68,7 +68,7 @@ html, body {
   min-height: 100px;
 }
 
-.active-drafter-card-do-flip .active-drafter-card-inner {
+.active-drafter-card-do-flip {
   transform: rotateY(180deg);
 }
 
@@ -97,7 +97,7 @@ html, body {
 }
 
 .draft-card-logo img {
-  max-width:20%;
+  max-width:35%;
 }
 .active-drafter-content div {
   margin-bottom: 15px;
@@ -127,7 +127,7 @@ html, body {
 
 .start-screen .start-team-select button:focus {
   border: 5px solid;
-  border-color: red;
+  border-color: gold;
 }
 
 .start-screen .start-team-select button img {
@@ -142,6 +142,66 @@ html, body {
   font-size:  24px;
 }
 
+.draft-progress-box {
+  max-width: 90vw;
+  border-radius: 5px;
+  padding:  5px;
+  margin:  auto;
+  background-color: white;
+}
+.prospect-info-row {
+  background-color: white;
+  color: black;
+  display: flex;
+  flex-direction: row;
+  padding: 5px;
+  font-size:  14px;
+}
+.prospect-info-row div:first-child {
+  width:  56%;
+}
+.prospect-info-row div:nth-child(2) {
+  width:  20%;
+}
+
+.prospect-info-row div:nth-child(3) {
+  width:  20%;
+}
+.draft-button-active {
+  background-color: green;
+  color:  whitesmoke;
+  font-weight: 900;
+}
+.draft-card-message {
+  color:  indianred;
+  font-weight:  900;
+}
+.draft-progress-tabs {
+  display: flex;
+  flex-direction: row;
+  margin:  0 auto;
+  width:  90vw;
+  text-align: center;
+}
+.draft-progress-tab {
+  padding:  8px;
+  color:  white;
+  width:  33%;
+}
+.black-bg {
+  background-color: black;
+}
+.gold-bg {
+  background-color: gold;
+}
+.silver-bg {
+  background-color: silver;
+}
+.table-head {
+  background-color: rgba(0, 0, 0, 0.7);
+  color:  gold;
+  font-weight: 900;
+}
 .white {
   color: white;
 }
@@ -152,4 +212,13 @@ html, body {
 
 .large-font {
   font-size: large;
+}
+
+.centered {
+  margin: 0 auto;
+  text-align:  center;
+  padding: 10px;
+}
+.mt-20 {
+  margin-top: 20px;
 }

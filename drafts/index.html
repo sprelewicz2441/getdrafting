@@ -68,9 +68,9 @@
     </div>
 
     <div id="main-draft-screen" hidden>
-      <div id="draft-dialog" class="large-font white">Here we go!</div>
+      <div id="draft-dialog" class="large-font white centered">Here we go!</div>
       <div class="active-drafter-card" id="active-drafter-card">
-        <div class="active-drafter-card-inner">
+        <div class="active-drafter-card-inner" id="active-drafter-card-inner">
           <div class="active-drafter-card-front">
             <img src="/assets/NFL/_NFL_logo.png">
           </div>
@@ -78,6 +78,7 @@
             <div class="draft-card-logo">
               <img src="/assets/NFL/_NFL_logo.png">
             </div>
+            <div class="draft-card-message" id="draft-card-message" hidden></div>
             <div class="active-drafter-content">
               <div>Round # <span class="blue" id="draft-round">2</span></div>
               <div>Name <span class="blue large-font" id="draftee-name">Cranjis McBasketball</span></div>
@@ -85,10 +86,28 @@
               <div>School <span class="blue" id="draftee-school">Buffalo</span></div>
               <div>Overall <span class="blue" id="draft-overall">108</span></div>
               <div class="draft-card-logo" id="drafting-team">
-                <img src="/assets/NFL/bills.png">
+                <img id="drafting-team-logo" src="/assets/NFL/bills.png">
               </div>
             </div>
           </div>
+        </div>
+      </div>
+      <div id="draft-picks-and-prospects" class="mt-20">
+        <div id="draft-progress-tabs" class="draft-progress-tabs">
+          <div id="all-picks-tab" class="draft-progress-tab black-bg">All Picks</div>
+          <div id="your-picks-tab" class="draft-progress-tab gold-bg">Your Picks</div>
+          <div id="available-prospects-tab" class="draft-progress-tab silver-bg">Available</div>
+        </div>
+
+        <div id="drafted-list" class="draft-progress-box" hidden>
+          <div class="prospect-info-row table-head"><div>Pick</div><div>Team</div><div>Name</div></div>
+        </div>
+        <div id="team-draft-list" class="draft-progress-box" hidden>
+          <div class="prospect-info-row table-head"><div>Pick</div><div>Name</div><div>Position</div></div>
+        </div>
+        <div id="available-prospect-list" class="draft-progress-box">
+          <div class="prospect-info-row table-head"><div>Prospect</div><div></div><div>Position</div></div>
+
         </div>
       </div>
     </div>
