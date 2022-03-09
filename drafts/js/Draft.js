@@ -154,7 +154,7 @@ export default class Draft {
     draft_card.querySelector("#draft-round").innerHTML = this.current_round;
     draft_card.querySelector("#draft-overall").innerHTML = slot[0];
     draft_card.querySelector("#drafting-team-logo").src=`/assets/NFL/${team}.png`;
-    draft_card.classList.add("active-drafter-card-do-flip");
+    //draft_card.classList.add("active-drafter-card-do-flip");
   }
 
   addToPickList(player, slot) {
