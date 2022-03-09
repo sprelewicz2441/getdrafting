@@ -103,7 +103,7 @@ export default class Draft {
   renderUserDraftCard() {
     let draft_card = document.querySelector('#active-drafter-card-inner');
     draft_card.querySelector("#draft-card-message").style.display = 'block';
-    draft_card.querySelector("#draft-card-message").innerHTML = "You're pick!";
+    draft_card.querySelector("#draft-card-message").innerHTML = "Your pick!";
     draft_card.querySelector("#draftee-name").innerHTML = '';
     draft_card.querySelector("#draftee-position").innerHTML = '';
     draft_card.querySelector("#draftee-school").innerHTML = '';

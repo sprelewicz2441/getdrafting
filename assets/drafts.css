@@ -172,6 +172,7 @@ html, body {
 .draft-card-message {
   color:  indianred;
   font-weight:  900;
+  text-align: center;
 }
 .draft-progress-tabs {
   display: flex;
