@@ -34,19 +34,17 @@ html, body {
   max-width: 100vw;
 }
 
-@supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
-  .active-drafter-card {
-    background-color: rgba(255, 255, 255, 1.0);  
-  }
-}
-
 .active-drafter-card {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 1.0);  
   border: 1px solid #f1f1f1;
   border-radius: 5px;
   color: #333;
   max-width: 80%;
   min-width: 80%;
-  height: 400px;
+  height: 420px;
+  flex-basis: min-content;
   margin: auto;
   perspective: 1000px;
   font-weight: 600;
@@ -54,7 +52,9 @@ html, body {
 
 .active-drafter-card-inner {
   width: 100%;
-  height: 100%;
+  height:  100%;
+  display: flex;
+  flex-direction: column;
   transition: transform 1s;
   transform-style: preserve-3d;
 }
@@ -94,10 +94,11 @@ html, body {
 }
 
 .draft-card-logo img {
-  max-width:35%;
+  max-width:120px;
+  max-height:  120px;
 }
 .active-drafter-content div {
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
 .start-screen {
@@ -164,6 +165,17 @@ html, body {
 .prospect-info-row div:nth-child(3) {
   width:  20%;
 }
+
+.tight-row div:first-child {
+  width:  20%;
+}
+.tight-row div:nth-child(2) {
+  width:  20%;
+}
+
+.tight-row div:nth-child(3) {
+  width:  56%;
+}
 .draft-button-active {
   background-color: green;
   color:  whitesmoke;
@@ -192,8 +204,11 @@ html, body {
 .gold-bg {
   background-color: gold;
 }
+.maroon-bg {
+  background-color: maroon;
+}
 .silver-bg {
-  background-color: silver;
+  background-color: darkslategrey;
 }
 .table-head {
   background-color: rgba(0, 0, 0, 0.7);

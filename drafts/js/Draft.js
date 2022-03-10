@@ -9,6 +9,10 @@ export default class Draft {
   init() {
     this.getData('draftmetadata2022.json').then(val => {
       this.metadata = val;
+      this.round_turnovers = []; 
+      this.metadata.round_pick_turnover.forEach((row, index) => {
+        this.round_turnovers.push(row.pick);
+      });
     });
     this.getData('draftorder2022.json').then(val => {
       this.draftorder = val;
@@ -39,7 +43,7 @@ export default class Draft {
 
   populateAvailableProspects() {
     let prospectBox = document.querySelector("#available-prospect-list");
-    console.log(this.prospects[0]);
+
     this.prospects.forEach(prospect => {
       let rowWrapper = document.createElement('div');
       rowWrapper.classList.add('prospect-info-row');
@@ -71,6 +75,11 @@ export default class Draft {
 
   doPick() {
     let draft_slot = this.getNextDraftSlot();
+
+    if(this.round_turnovers.includes(draft_slot[0])) {
+      this.current_round++;
+    }
+
     if(draft_slot[1] == this.teamGM) {
       clearInterval(this.interval);
       this.draft_slot = draft_slot;
@@ -159,13 +168,13 @@ export default class Draft {
 
   addToPickList(player, slot) {
     let pick_list_parent = document.querySelector("#drafted-list");
-    let pick_html = "<div class='prospect-info-row'><div>" + slot[0] + "</div><div>" + slot[1] + "</div><div>" + player.playername + "</div></div>";
+    let pick_html = "<div class='prospect-info-row tight-row'><div>" + slot[0] + "</div><div>" + slot[1] + "</div><div>" + player.playername + "</div></div>";
     pick_list_parent.innerHTML += pick_html;
   }
 
   addToUserPickList(player, slot) {
     let pick_list_parent = document.querySelector("#team-draft-list");
-    let pick_html = "<div class='prospect-info-row'><div>" + slot[0] + "</div><div>" + player.playername + "</div><div>" + player.position + "</div></div>";
+    let pick_html = "<div class='prospect-info-row tight-row'><div>" + slot[0] + "</div><div>" + player.playername + "</div><div>" + player.position + "</div></div>";
     pick_list_parent.innerHTML += pick_html;
   }
 

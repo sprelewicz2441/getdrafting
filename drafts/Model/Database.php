@@ -1,26 +1,32 @@
 <?php
 
-//define("DB_HOST", "localhost");
-//define("DB_USERNAME", "root");
-//define("DB_PASSWORD", "");
-//define("DB_DATABASE_NAME", "getdrafting");
-
+if(!getenv("ENVIRONMENT") || getenv("ENVIRONMENT") != 'production') {
+    define("DB_HOST", "localhost");
+    define("DB_USERNAME", "root");
+    define("DB_PASSWORD", "");
+    define("DB_DATABASE_NAME", "getdrafting");
+}
 class Database
 {
     protected $connection = null;
  
     public function __construct() {
-        $url = parse_url(getenv("CLEARDB_DATABASE_URL"));
-        $server = $url["host"];
-        $username = $url["user"];
-        $password = $url["pass"];
-        $db = substr($url["path"], 1);
+        if (getenv("ENVIRONMENT") == 'production') {
+            $url = parse_url(getenv("CLEARDB_DATABASE_URL"));
+            $server = $url["host"];
+            $username = $url["user"];
+            $password = $url["pass"];
+            $db = substr($url["path"], 1);
+        }
         mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
 
         try {
-            $this->connection = new mysqli($server, $username, $password, $db);
-            //$this->connection = new mysqli(DB_HOST, DB_USERNAME, DB_PASSWORD, DB_DATABASE_NAME);
-         
+            if (getenv("ENVIRONMENT") == 'production') {
+                $this->connection = new mysqli($server, $username, $password, $db);
+            } else {
+                $this->connection = new mysqli(DB_HOST, DB_USERNAME, DB_PASSWORD, DB_DATABASE_NAME);
+            }
+            
             if ( mysqli_connect_errno()) {
                 throw new Exception("Could not connect to database."); 
             }
