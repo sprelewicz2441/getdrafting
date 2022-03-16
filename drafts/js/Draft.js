@@ -4,6 +4,22 @@ export default class Draft {
     this.current_pick_num = 1;
     this.current_round = 1;
     this.teamGM = '';
+
+    // Attach game sounds
+    this.sounds = [];
+    this.sounds.start_sound = document.createElement("audio");
+    this.sounds.start_sound.src = '/assets/draft-intro.mp3';
+    this.sounds.start_sound.setAttribute("preload", "auto");
+    this.sounds.start_sound.setAttribute("controls", "none");
+    this.sounds.start_sound.style.display = "none";
+    document.body.appendChild(this.sounds.start_sound);
+
+    this.sounds.user_pick_sound = document.createElement("audio");
+    this.sounds.user_pick_sound.src = '/assets/chime-synth.mp3';
+    this.sounds.user_pick_sound.setAttribute("preload", "auto");
+    this.sounds.user_pick_sound.setAttribute("controls", "none");
+    this.sounds.user_pick_sound.style.display = "none";
+    document.body.appendChild(this.sounds.user_pick_sound);
   }
 
   init() {
@@ -17,6 +33,27 @@ export default class Draft {
     this.getData('draftorder2022.json').then(val => {
       this.draftorder = val;
     });
+    this.getData('teamneeds2022.json').then(val => {
+      this.teamneeds = val;
+    });
+  }
+
+  showSplash() {
+    this.hideTeamSelect();
+    this.sounds.start_sound.play();
+    document.querySelector('#draft-splash-screen').style.display = 'block';
+
+    let self = this;
+    setTimeout(function() { 
+      self.hideSplash();
+      self.showMainDraftScreen();
+      self.runDraft();
+    }, 15000);
+    
+  }
+
+  hideSplash() {
+    document.querySelector('#draft-splash-screen').style.display = 'none';
   }
 
   startDraft(teamGM) {
@@ -26,11 +63,10 @@ export default class Draft {
     }
 
     this.teamGM = teamGM;
-    this.hideTeamSelect();
-    this.showMainDraftScreen();
     this.populateAvailableProspects();
-    document.querySelector('#draft-dialog').innerHTML = "You are drafting as the " + this.teamGM;
-    this.runDraft();
+    this.showSplash();
+    document.querySelector('#draft-dialog').innerHTML = "You are drafting as the <strong>" + this.capitalizeTeam(this.teamGM) + "</strong>";
+    
   }
 
   hideTeamSelect() {
@@ -55,7 +91,7 @@ export default class Draft {
 
       let self = this;
       draftDiv.addEventListener('click', function ( event ) {
-        self.makePick(null, prospect.id);
+        self.makePick(prospect.id);
       });
       let positionDiv = document.createElement('div');
       positionDiv.textContent = prospect.position;
@@ -74,23 +110,23 @@ export default class Draft {
   }
 
   doPick() {
-    let draft_slot = this.getNextDraftSlot();
+    this.draft_slot = this.getNextDraftSlot();
 
-    if(this.round_turnovers.includes(draft_slot[0])) {
+    if(this.round_turnovers.includes(this.draft_slot[0])) {
       this.current_round++;
     }
 
-    if(draft_slot[1] == this.teamGM) {
+    if(this.draft_slot[1] == this.teamGM) {
       clearInterval(this.interval);
-      this.draft_slot = draft_slot;
       this.allowUserPick();
     } else {
-      this.makePick(draft_slot);
+      this.makePick();
     }
     this.current_pick_num++;
   }
 
   allowUserPick() {
+    this.sounds.user_pick_sound.play();
     let prospect_buttons = document.querySelectorAll('.draft-button');
     prospect_buttons.forEach(button => {
       button.disabled = false;
@@ -121,22 +157,22 @@ export default class Draft {
     draft_card.querySelector("#drafting-team-logo").src=`/assets/NFL/${this.draft_slot[1]}.png`;
   }
 
-  makePick(draft_slot = null, prospect_id = null) {
+  makePick(prospect_id = null) {
     let current_prospect = null;
+    let draft_slot = this.draft_slot;
     if(prospect_id) {
-      draft_slot = this.draft_slot;
       let current_prospect_index = this.prospects.findIndex(prospect => prospect.id === prospect_id);
       current_prospect = this.prospects[current_prospect_index];
       this.prospects.splice(current_prospect_index, 1);
     } else {
       current_prospect = this.getNextPick();
     }
-    this.renderDraftCard(current_prospect, draft_slot);
-    this.addToPickList(current_prospect, draft_slot);
+    this.renderDraftCard(current_prospect);
+    this.addToPickList(current_prospect);
     this.removefromProspects(current_prospect.id);
     if(prospect_id) {
       this.disallowUserPick();
-      this.addToUserPickList(current_prospect, draft_slot);
+      this.addToUserPickList(current_prospect);
       this.runDraft();
     }
   }
@@ -146,14 +182,45 @@ export default class Draft {
   }
 
   getNextPick() {
-    return this.prospects.shift();
+    let draft_slot = this.draft_slot;
+    let currteam = this.capitalizeTeam(draft_slot[1]);
+    let currteamneeds = this.teamneeds[currteam];
+    let current_prospect = null;
+
+    let primary = currteamneeds["Primary"].split(',');
+    let secondary = currteamneeds["Secondary"];
+    let tertiary = currteamneeds["Ancillary"];
+    let noneed = currteamneeds["Noneed"];
+
+    let wt_primary = 100/primary.length;
+    let wt_rank = 526 - draft_slot[0];
+    let wt_peak = 526;
+
+    if(this.current_round == 1) {
+      let next =  this.prospects[0];
+      if(primary.indexOf(next.position) > -1) {
+        current_prospect = this.prospects.shift();
+      } else {
+        let major_infl = primary[0];
+        let current_prospect_index = this.prospects.findIndex(prospect => prospect.position == major_infl);
+        current_prospect = this.prospects[current_prospect_index];
+        this.prospects.splice(current_prospect_index, 1);
+      }
+    } else {
+      // FOR NOW
+      current_prospect = this.prospects.shift();
+    }
+
+    return current_prospect;
+
   }
 
   getNextDraftSlot() {
     return this.draftorder.shift();
   }
 
-  renderDraftCard(player, slot) {
+  renderDraftCard(player) {
+    let slot = this.draft_slot;
     let draft_card = document.querySelector('#active-drafter-card-inner');
     let team = slot[1];
 
@@ -166,13 +233,14 @@ export default class Draft {
     draft_card.classList.add("active-drafter-card-do-flip");
   }
 
-  addToPickList(player, slot) {
+  addToPickList(player) {
     let pick_list_parent = document.querySelector("#drafted-list");
-    let pick_html = "<div class='prospect-info-row tight-row'><div>" + slot[0] + "</div><div>" + slot[1] + "</div><div>" + player.playername + "</div></div>";
+    let pick_html = "<div class='prospect-info-row tight-row'><div>" + this.draft_slot[0] + "</div><div>" + this.capitalizeTeam(this.draft_slot[1]) + "</div><div>" + player.playername + "</div></div>";
     pick_list_parent.innerHTML += pick_html;
   }
 
-  addToUserPickList(player, slot) {
+  addToUserPickList(player) {
+    let slot = this.draft_slot;
     let pick_list_parent = document.querySelector("#team-draft-list");
     let pick_html = "<div class='prospect-info-row tight-row'><div>" + slot[0] + "</div><div>" + player.playername + "</div><div>" + player.position + "</div></div>";
     pick_list_parent.innerHTML += pick_html;
@@ -187,5 +255,9 @@ export default class Draft {
     } catch (error) {
         console.log(error);
     }
+  }
+
+  capitalizeTeam(team) {
+    return team.charAt(0).toUpperCase() + team.slice(1);
   }
 }

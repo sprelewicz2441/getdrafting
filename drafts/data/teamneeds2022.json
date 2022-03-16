@@ -1,0 +1,194 @@
+{
+   "Colts": {
+      "Primary": "QB, EDGE, OT, WR",
+      "Secondary": "CB, S, EDGE, TE, DL",
+      "Ancillary": "WR, RB, IOL, LB, CB",
+      "Noneed": ""
+   },
+   "Cowboys": {
+      "Primary": "EDGE, S, DL",
+      "Secondary": "TE, WR, IOL, CB",
+      "Ancillary": "OT, QB",
+      "Noneed": "RB"
+   },
+   "Saints": {
+      "Primary": "WR, OT, QB",
+      "Secondary": "S, DL, TE",
+      "Ancillary": "WR, IOL, CB, EDGE, LB, RB",
+      "Noneed": ""
+   },
+   "Texans": {
+      "Primary": "EDGE, CB, S",
+      "Secondary": "QB, WR, IOL",
+      "Ancillary": "RB, LB, TE, CB, OT",
+      "Noneed": ""
+   },
+   "Eagles": {
+      "Primary": "EDGE, CB, IOL",
+      "Secondary": "S, LB, RB, OT",
+      "Ancillary": "QB, CB, WR, DL",
+      "Noneed": ""
+   },
+   "Seahawks": {
+      "Primary": "OT, EDGE, CB, QB",
+      "Secondary": "IOL, WR",
+      "Ancillary": "S, DL, RB, LB, TE",
+      "Noneed": ""
+   },
+   "Jets": {
+      "Primary": "OT, EDGE, S, CB",
+      "Secondary": "TE, LB, IOL, WR, DL",
+      "Ancillary": "QB, RB, IOL, WR, LB, CB, S",
+      "Noneed": ""
+   },
+   "Steelers": {
+      "Primary": "QB, IOL, OT, DL, CB",
+      "Secondary": "WR, EDGE, LB",
+      "Ancillary": "WR, S",
+      "Noneed": ""
+   },
+   "Lions": {
+      "Primary": "EDGE, S, QB, WR, LB",
+      "Secondary": "CB, WR",
+      "Ancillary": "LB, S, DL, TE, RB, OT, IOL",
+      "Noneed": ""
+   },
+   "Giants": {
+      "Primary": "OT, EDGE",
+      "Secondary": "LB, WR, QB, IOL, TE, RB",
+      "Ancillary": "CB, S, LB, IOL",
+      "Noneed": "DL"
+   },
+   "Jaguars": {
+      "Primary": "EDGE",
+      "Secondary": "S, OT, DL, IOL, TE, WR",
+      "Ancillary": "CB, LB",
+      "Noneed": "QB"
+   },
+   "Chiefs": {
+      "Primary": "WR, EDGE, S, LB, CB",
+      "Secondary": "RB, OT",
+      "Ancillary": "DL, IOL, TE",
+      "Noneed": "QB"
+   },
+   "Ravens": {
+      "Primary": "DL, EDGE, CB, IOL",
+      "Secondary": "OT, WR, RB",
+      "Ancillary": "TE, S, LB",
+      "Noneed": "QB"
+   },
+   "Patriots": {
+      "Primary": "CB, LB, S",
+      "Secondary": "WR, OT, IOL, EDGE, DL",
+      "Ancillary": "WR, RB, QB, TE",
+      "Noneed": ""
+   },
+   "Bills": {
+      "Primary": "DL, EDGE, CB",
+      "Secondary": "WR, IOL, RB",
+      "Ancillary": "TE, QB, OT, S, LB",
+      "Noneed": ""
+   },
+   "Commanders": {
+      "Primary": "WR, CB, IOL",
+      "Secondary": "S, TE, QB",
+      "Ancillary": "LB, RB, EDGE, OT, WR, CB",
+      "Noneed": "DL"
+   },
+   "Raiders": {
+      "Primary": "DL, IOL, CB, WR",
+      "Secondary": "OT, EDGE, LB",
+      "Ancillary": "QB, CB, TE, S",
+      "Noneed": "RB"
+   },
+   "Falcons": {
+      "Primary": "OT, EDGE, S, WR, IOL",
+      "Secondary": "RB, TE, DL, LB, CB",
+      "Ancillary": "WR, QB, LB",
+      "Noneed": ""
+   },
+   "Dolphins": {
+      "Primary": "WR, RB, OT, EDGE, LB",
+      "Secondary": "WR, TE, QB, IOL",
+      "Ancillary": "LB, OT, S, CB, DL",
+      "Noneed": ""
+   },
+   "Cardinals": {
+      "Primary": "CB, EDGE, RB",
+      "Secondary": "TE, CB, WR",
+      "Ancillary": "EDGE, OT, LB, S, QB",
+      "Noneed": ""
+   },
+   "Bengals": {
+      "Primary": "OT, IOL, TE, CB",
+      "Secondary": "S, LB, EDGE, WR",
+      "Ancillary": "IOL",
+      "Noneed": "QB, RB, DL"
+   },
+   "Packers": {
+      "Primary": "EDGE, OT, DL",
+      "Secondary": "QB, WR, LB, TE, IOL",
+      "Ancillary": "S, CB, RB",
+      "Noneed": ""
+   },
+   "Bears": {
+      "Primary": "OT, WR, IOL, CB",
+      "Secondary": "DL, TE, LB",
+      "Ancillary": "RB, EDGE, WR, S",
+      "Noneed": "QB"
+   },
+   "Chargers": {
+      "Primary": "OT, EDGE, CB, DL",
+      "Secondary": "TE, LB, WR",
+      "Ancillary": "IOL, S, RB, DL, EDGE",
+      "Noneed": "QB"
+   },
+   "Vikings": {
+      "Primary": "S, DL, CB, QB",
+      "Secondary": "WR, LB, EDGE",
+      "Ancillary": "IOL, OT, TE, CB",
+      "Noneed": "RB"
+   },
+   "Buccaneers": {
+      "Primary": "WR, OT, CB",
+      "Secondary": "QB, RB, S, TE",
+      "Ancillary": "LB, DL, EDGE, IOL",
+      "Noneed": ""
+   },
+   "Broncos": {
+      "Primary": "EDGE, CB, LB, S",
+      "Secondary": "OT, RB",
+      "Ancillary": "IOL, TE, DL, WR",
+      "Noneed": "QB"
+   },
+   "Panthers": {
+      "Primary": "OT, QB",
+      "Secondary": "IOL, DL, EDGE, LB, WR, TE",
+      "Ancillary": "CB, IOL, RB",
+      "Noneed": ""
+   },
+   "Browns": {
+      "Primary": "EDGE, DL, WR",
+      "Secondary": "S, LB, TE, QB",
+      "Ancillary": "OT, CB",
+      "Noneed": "RB, IOL"
+   },
+   "Rams": {
+      "Primary": "IOL, OT, LB, EDGE",
+      "Secondary": "S, CB, LB, RB, TE",
+      "Ancillary": "DL",
+      "Noneed": "QB, WR"
+   },
+   "49ers": {
+      "Primary": "IOL, CB",
+      "Secondary": "WR, EDGE",
+      "Ancillary": "S, QB, RB, DL, LB",
+      "Noneed": "OT, TE"
+   },
+   "Titans": {
+      "Primary": "LB, TE, CB, OT, WR",
+      "Secondary": "DL, EDGE, QB",
+      "Ancillary": "RB, IOL, WR, CB",
+      "Noneed": ""
+   }
+}
