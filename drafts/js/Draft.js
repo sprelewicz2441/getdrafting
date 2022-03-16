@@ -44,6 +44,14 @@ export default class Draft {
     document.querySelector('#draft-splash-screen').style.display = 'block';
 
     let self = this;
+
+    let seconds = document.getElementById("countdown").textContent;
+    let countdown = setInterval(function() {
+        seconds--;
+        document.getElementById("countdown").textContent = seconds;
+        if (seconds <= 0) clearInterval(countdown);
+    }, 1000);
+    
     setTimeout(function() { 
       self.hideSplash();
       self.showMainDraftScreen();
