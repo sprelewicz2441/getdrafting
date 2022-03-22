@@ -51,7 +51,7 @@ export default class Draft {
         document.getElementById("countdown").textContent = seconds;
         if (seconds <= 0) clearInterval(countdown);
     }, 1000);
-    
+
     setTimeout(function() { 
       self.hideSplash();
       self.showMainDraftScreen();
@@ -114,7 +114,7 @@ export default class Draft {
     
     this.interval = setInterval(function() {
       self.doPick();
-    }, 2000);
+    }, 1500);
   }
 
   doPick() {
