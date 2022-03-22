@@ -161,7 +161,7 @@ html, body {
 
 .draft-progress-box {
   max-width: 90vw;
-  min-height:  200px;
+  min-height:  400px;
   border-radius: 5px;
   padding:  5px;
   margin:  auto;
@@ -261,4 +261,18 @@ html, body {
 }
 .mt-20 {
   margin-top: 20px;
+}
+
+.mb-30 {
+  margin-bottom: 30px;
+}
+
+.draft-actions {
+  margin: auto;
+  text-align: center;
+}
+
+.draft-actions > * {
+  margin: auto;
+  text-align: center;
 }

@@ -60,3 +60,15 @@ document.querySelector("#available-prospects-tab").addEventListener('click', (ev
   document.querySelector("#your-picks-tab").classList.remove("focused-tab");
   document.querySelector("#available-prospects-tab").classList.add("focused-tab");
 });
+
+document.querySelector("#pause-draft-button").addEventListener('click', (event) => {
+  event.target.style.display = "none";
+  document.querySelector("#resume-draft-button").style.display = "block";
+  draft.pauseDraft();
+});
+
+document.querySelector("#resume-draft-button").addEventListener('click', (event) => {
+  event.target.style.display = "none";
+  document.querySelector("#pause-draft-button").style.display = "block";
+  draft.runDraft();
+});

@@ -124,6 +124,10 @@ export default class Draft {
     }, 1500);
   }
 
+  pauseDraft() {
+    clearInterval(this.interval);
+  }
+
   doPick() {
     this.draft_slot = this.getNextDraftSlot();
 
