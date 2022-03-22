@@ -25,6 +25,7 @@ document.querySelectorAll(".team-GM-select").forEach(el => {
 
 document.querySelector("#start-draft-button").addEventListener('click', (event) => {
   draft.startDraft(teamGM);
+  document.querySelector("#available-prospects-tab").click();
 });
 
 document.querySelector("#skip-cutscene").addEventListener('click', (event) => {
@@ -36,16 +37,26 @@ document.querySelector("#all-picks-tab").addEventListener('click', (event) => {
   document.querySelector("#drafted-list").style.display = 'block';
   document.querySelector("#team-draft-list").style.display = 'none';
   document.querySelector("#available-prospect-list").style.display = 'none';
+  document.querySelector("#your-picks-tab").classList.remove("focused-tab");
+  document.querySelector("#available-prospects-tab").classList.remove("focused-tab");
+  document.querySelector("#all-picks-tab").classList.add("focused-tab");
 });
 
 document.querySelector("#your-picks-tab").addEventListener('click', (event) => {
   document.querySelector("#drafted-list").style.display = 'none';
   document.querySelector("#team-draft-list").style.display = 'block';
   document.querySelector("#available-prospect-list").style.display = 'none';
+  document.querySelector("#all-picks-tab").classList.remove("focused-tab");
+  document.querySelector("#available-prospects-tab").classList.remove("focused-tab");
+  document.querySelector("#your-picks-tab").classList.add("focused-tab");
 });
 
 document.querySelector("#available-prospects-tab").addEventListener('click', (event) => {
+
   document.querySelector("#drafted-list").style.display = 'none';
   document.querySelector("#team-draft-list").style.display = 'none';
   document.querySelector("#available-prospect-list").style.display = 'block';
+  document.querySelector("#all-picks-tab").classList.remove("focused-tab");
+  document.querySelector("#your-picks-tab").classList.remove("focused-tab");
+  document.querySelector("#available-prospects-tab").classList.add("focused-tab");
 });

@@ -214,7 +214,7 @@ html, body {
   text-align: center;
 }
 .focused-tab {
-  border-top: solid 5px yellow;
+  border-top: solid 5px goldenrod;
 }
 .draft-progress-tab {
   padding:  8px;
