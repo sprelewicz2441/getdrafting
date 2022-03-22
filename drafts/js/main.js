@@ -27,6 +27,12 @@ document.querySelector("#start-draft-button").addEventListener('click', (event) 
   draft.startDraft(teamGM);
 });
 
+document.querySelector("#skip-cutscene").addEventListener('click', (event) => {
+  draft.hideSplash();
+  draft.showMainDraftScreen();
+  draft.runDraft();
+});
+
 document.querySelector("#all-picks-tab").addEventListener('click', (event) => {
   document.querySelector("#drafted-list").style.display = 'block';
   document.querySelector("#team-draft-list").style.display = 'none';

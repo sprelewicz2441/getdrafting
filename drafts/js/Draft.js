@@ -52,7 +52,7 @@ export default class Draft {
         if (seconds <= 0) clearInterval(countdown);
     }, 1000);
 
-    setTimeout(function() { 
+    this.splashInterval = setTimeout(function() { 
       self.hideSplash();
       self.showMainDraftScreen();
       self.runDraft();
@@ -61,6 +61,9 @@ export default class Draft {
   }
 
   hideSplash() {
+    if(this.splashInterval) {
+      clearInterval(this.splashInterval);
+    }
     document.querySelector('#draft-splash-screen').style.display = 'none';
   }
 
@@ -205,15 +208,12 @@ export default class Draft {
     let wt_peak = 526;
 
     if(this.current_round == 1) {
-      let next =  this.prospects[0];
-      if(primary.indexOf(next.position) > -1) {
-        current_prospect = this.prospects.shift();
-      } else {
-        let major_infl = primary[0];
-        let current_prospect_index = this.prospects.findIndex(prospect => prospect.position == major_infl);
-        current_prospect = this.prospects[current_prospect_index];
-        this.prospects.splice(current_prospect_index, 1);
-      }
+      const random_prim = Math.floor(Math.random() * primary.length);
+      console.log("Position: " + primary[random_prim].trim());
+      let current_prospect_index = this.prospects.findIndex(prospect => prospect.position == primary[random_prim].trim());
+      console.log("Index: " + current_prospect_index)
+      current_prospect = this.prospects[current_prospect_index];
+      this.prospects.splice(current_prospect_index, 1);
     } else {
       // FOR NOW
       current_prospect = this.prospects.shift();
