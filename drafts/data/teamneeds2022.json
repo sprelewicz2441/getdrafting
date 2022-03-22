@@ -84,8 +84,8 @@
       "Noneed": ""
    },
    "Bills": {
-      "Primary": "DL, EDGE, CB",
-      "Secondary": "WR, IOL, RB",
+      "Primary": "DL, CB",
+      "Secondary": "WR, IOL, RB, EDGE",
       "Ancillary": "TE, QB, OT, S, LB",
       "Noneed": ""
    },

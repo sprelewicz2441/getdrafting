@@ -28,9 +28,8 @@ document.querySelector("#start-draft-button").addEventListener('click', (event) 
 });
 
 document.querySelector("#skip-cutscene").addEventListener('click', (event) => {
-  draft.hideSplash();
-  draft.showMainDraftScreen();
-  draft.runDraft();
+  draft.stopMusic();
+  draft.letsGetThisPartyStarted();
 });
 
 document.querySelector("#all-picks-tab").addEventListener('click', (event) => {

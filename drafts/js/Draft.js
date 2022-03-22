@@ -53,9 +53,7 @@ export default class Draft {
     }, 1000);
 
     this.splashInterval = setTimeout(function() { 
-      self.hideSplash();
-      self.showMainDraftScreen();
-      self.runDraft();
+      self.letsGetThisPartyStarted();
     }, 15000);
     
   }
@@ -78,6 +76,12 @@ export default class Draft {
     this.showSplash();
     document.querySelector('#draft-dialog').innerHTML = "You are drafting as the <strong>" + this.capitalizeTeam(this.teamGM) + "</strong>";
     
+  }
+
+  letsGetThisPartyStarted() {
+    this.hideSplash();
+    this.showMainDraftScreen();
+    this.runDraft();
   }
 
   hideTeamSelect() {
@@ -267,5 +271,9 @@ export default class Draft {
 
   capitalizeTeam(team) {
     return team.charAt(0).toUpperCase() + team.slice(1);
+  }
+
+  stopMusic() {
+    this.sounds.start_sound.pause();
   }
 }

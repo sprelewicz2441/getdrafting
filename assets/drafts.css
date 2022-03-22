@@ -238,6 +238,10 @@ html, body {
   color:  gold;
   font-weight: 900;
 }
+.skip-button {
+  font-size: large;
+  padding:  20px;
+}
 .white {
   color: white;
 }
