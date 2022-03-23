@@ -176,25 +176,31 @@ html, body {
   font-size:  14px;
 }
 .prospect-info-row div:first-child {
-  width:  56%;
+  width:  45%;
 }
 .prospect-info-row div:nth-child(2) {
-  width:  20%;
+  width:  30%;
+}
+.prospect-info-row div:nth-child(3) {
+  width:  10%;
 }
 
 .prospect-info-row div:nth-child(3) {
-  width:  20%;
+  width:  15%;
 }
 
 .tight-row div:first-child {
-  width:  15%;
+  width:  10%;
 }
 .tight-row div:nth-child(2) {
   width:  35%;
 }
 
 .tight-row div:nth-child(3) {
-  width:  46%;
+  width:  45%;
+}
+.tight-row div:nth-child(4) {
+  width:  10%;
 }
 .draft-button-active {
   background-color: green;

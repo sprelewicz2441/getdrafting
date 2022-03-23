@@ -101,6 +101,8 @@ export default class Draft {
       rowWrapper.id = prospect.id;
       let nameDiv = document.createElement('div');
       nameDiv.textContent = prospect.playername;
+      let schoolDiv = document.createElement('div');
+      schoolDiv.textContent = prospect.school;
       let draftDiv = document.createElement('div');
       draftDiv.innerHTML = "<button class='draft-button inactive-button' disabled>+</button>";
 
@@ -110,7 +112,7 @@ export default class Draft {
       });
       let positionDiv = document.createElement('div');
       positionDiv.textContent = prospect.position;
-      rowWrapper.append(nameDiv, draftDiv, positionDiv);
+      rowWrapper.append(nameDiv, schoolDiv, draftDiv, positionDiv);
 
       prospectBox.append(rowWrapper);
     });
@@ -251,14 +253,14 @@ export default class Draft {
 
   addToPickList(player) {
     let pick_list_parent = document.querySelector("#drafted-list");
-    let pick_html = "<div class='prospect-info-row tight-row'><div>" + this.draft_slot[0] + "</div><div>" + this.capitalizeTeam(this.draft_slot[1]) + "</div><div>" + player.playername + "</div></div>";
+    let pick_html = "<div class='prospect-info-row tight-row'><div>" + this.draft_slot[0] + "</div><div>" + this.capitalizeTeam(this.draft_slot[1]) + "</div><div>" + player.playername + "</div>" + player.position + "</div>";
     pick_list_parent.innerHTML += pick_html;
   }
 
   addToUserPickList(player) {
     let slot = this.draft_slot;
     let pick_list_parent = document.querySelector("#team-draft-list");
-    let pick_html = "<div class='prospect-info-row tight-row'><div>" + slot[0] + "</div><div>" + player.playername + "</div><div>" + player.position + "</div></div>";
+    let pick_html = "<div class='prospect-info-row tight-row'><div>" + slot[0] + "</div><div>" + player.playername + "</div><div>" + player.school + "</div><div>" + player.position + "</div></div>";
     pick_list_parent.innerHTML += pick_html;
   }
 
