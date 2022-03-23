@@ -175,31 +175,33 @@ html, body {
   padding: 5px;
   font-size:  14px;
 }
-.prospect-info-row div:first-child {
+.loose-row div:first-child {
   width:  45%;
 }
-.prospect-info-row div:nth-child(2) {
-  width:  30%;
+.loose-row div:nth-child(2) {
+  width:  35%;
 }
-.prospect-info-row div:nth-child(3) {
+.loose-row div:nth-child(3) {
   width:  10%;
 }
 
-.prospect-info-row div:nth-child(3) {
-  width:  15%;
+.loose-row div:nth-child(4) {
+  width:  10%;
 }
 
 .tight-row div:first-child {
   width:  10%;
 }
 .tight-row div:nth-child(2) {
+  width:  10%;
+}
+.tight-row div:nth-child(3) {
   width:  35%;
 }
-
-.tight-row div:nth-child(3) {
-  width:  45%;
-}
 .tight-row div:nth-child(4) {
+  width:  35%;
+}
+.tight-row div:nth-child(5) {
   width:  10%;
 }
 .draft-button-active {
