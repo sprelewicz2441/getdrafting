@@ -39,7 +39,7 @@ html, body {
 }
 
 .draft-page-wrapper {
-  width: 100vw;
+
 }
 
 .active-drafter-card {
@@ -49,9 +49,9 @@ html, body {
   border: 1px solid #f1f1f1;
   border-radius: 5px;
   color: #333;
-  max-width: 80%;
-  min-width: 80%;
-  height: 420px;
+  width: 80%;
+  max-width: 400px;
+  height: 430px;
   flex-basis: min-content;
   margin: auto;
   perspective: 1000px;
@@ -112,7 +112,6 @@ html, body {
 .start-screen {
   margin: auto;
   text-align: center;
-  max-width:  800px;
 }
 
 .splash-screen {
@@ -140,6 +139,7 @@ html, body {
 
 .start-screen .start-team-select button {
   background-color: white;
+  max-width: 100px;
 }
 
 .start-screen .start-team-select button:focus {
@@ -155,7 +155,9 @@ html, body {
 
 .start-draft-button {
   padding:  20px;
+  margin-bottom: 20px;
   width: 50%;
+  max-width: 400px;
   font-size:  24px;
 }
 
@@ -265,7 +267,6 @@ html, body {
 .centered {
   margin: 0 auto;
   text-align:  center;
-  padding: 10px;
 }
 .mt-20 {
   margin-top: 20px;
@@ -282,4 +283,39 @@ html, body {
 .draft-actions > * {
   margin: auto;
   text-align: center;
+}
+
+.draft-actions > * {
+  margin: auto;
+  text-align: center;
+}
+
+.alert-message {
+  font-size: x-large;
+  color:  gold;
+}
+
+.action-button {
+  background-color: white;
+  color:  red;
+  font-weight: 700;
+  padding: 10px;
+}
+
+.material-icons {
+   vertical-align: bottom;
+   font-size: 18px !important;
+}
+
+footer {
+  max-width:  90vw;
+  color:  whitesmoke;
+}
+
+
+/* MEDIA QUERIES ABOVE MOBILE HERE */
+@media only screen and (min-width: 825px) {
+  .start-team-select {
+    grid-template-columns: repeat(8, 1fr);
+  }
 }

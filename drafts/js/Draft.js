@@ -67,7 +67,7 @@ export default class Draft {
 
   startDraft(teamGM) {
     if(teamGM === '') {
-      console.log("No team selected");
+      document.querySelector("#start-screen-message").innerHTML = "Please select a team to draft for.";
       return;
     }
 
@@ -149,6 +149,7 @@ export default class Draft {
 
   allowUserPick() {
     this.sounds.user_pick_sound.play();
+    document.querySelector("#pause-buttons").style.display = 'none';
     let prospect_buttons = document.querySelectorAll('.draft-button');
     prospect_buttons.forEach(button => {
       button.disabled = false;
@@ -164,6 +165,7 @@ export default class Draft {
       button.classList.remove("draft-button-active");
     });
     document.querySelector("#draft-card-message").style.display = 'hidden';
+    document.querySelector("#pause-buttons").style.display = 'block';
     document.querySelector("#draft-card-message").innerHTML = "";
   }
 
@@ -214,15 +216,13 @@ export default class Draft {
     let tertiary = currteamneeds["Ancillary"];
     let noneed = currteamneeds["Noneed"];
 
-    let wt_primary = 100/primary.length;
-    let wt_rank = 526 - draft_slot[0];
-    let wt_peak = 526;
+    const wt_primary = 100/primary.length;
+    const wt_rank = 526 - draft_slot[0];
+    const wt_peak = 526;
 
     if(this.current_round == 1) {
       const random_prim = Math.floor(Math.random() * primary.length);
-      console.log("Position: " + primary[random_prim].trim());
       let current_prospect_index = this.prospects.findIndex(prospect => prospect.position == primary[random_prim].trim());
-      console.log("Index: " + current_prospect_index)
       current_prospect = this.prospects[current_prospect_index];
       this.prospects.splice(current_prospect_index, 1);
     } else {

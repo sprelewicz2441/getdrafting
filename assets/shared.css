@@ -1,9 +1,12 @@
 .site-header {
   background: #0A0442;
   color:  white;
-  padding: 20px;
+  padding: 10px;
+  max-height: 150px;
+  height: 15vh;
 }
 
 .site-header img {
-  width:  20vw;
+  object-fit:contain;
+  height:99%;
 }

@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Get drafting's create your own mock draft for the NFL and all sports. Fun sports draft simulator.">
   <title>Get Drafting - Create Your Mock Draft</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="/assets/drafts.css">
   <!-- manifest and meta theme color -->
   <!--<link rel="manifest" href="/manifest.json"> -->
@@ -56,7 +58,7 @@
         <button class="team-GM-select" id="raiders"><img src="/assets/NFL/raiders.png" /></button>
         <button class="team-GM-select" id="rams"><img src="/assets/NFL/rams.png" /></button>
         <button class="team-GM-select" id="ravens"><img src="/assets/NFL/ravens.png" /></button>
-        <button class="team-GM-select" id="commanders">Commanders</button>
+        <button class="team-GM-select" id="commanders"><img src="/assets/NFL/commanders.png" /></button>
         <button class="team-GM-select" id="saints"><img src="/assets/NFL/saints.png" /></button>
         <button class="team-GM-select" id="seahawks"><img src="/assets/NFL/seahawks.png" /></button>
         <button class="team-GM-select" id="steelers"><img src="/assets/NFL/steelers.png" /></button>
@@ -64,6 +66,7 @@
         <button class="team-GM-select" id="titans"><img src="/assets/NFL/titans.png" /></button>
         <button class="team-GM-select" id="vikings"><img src="/assets/NFL/vikings.png" /></button>
       </div>
+      <div id="start-screen-message" class="alert-message"></div>
       <button id="start-draft-button" class="start-draft-button">Start Draft</button>
     </div>
 
@@ -110,9 +113,11 @@
         </div>
       </div>
 
-      <div id="draft-actions" class="draft-actions mt-20">
-        <button id="pause-draft-button" class="action-button">Pause</button>
-        <button id="resume-draft-button" class="action-button" hidden>Resume</button>
+      <div id="draft-actions" class="draft-actions centered mt-20">
+        <div id="pause-buttons" class="centered">
+          <button id="pause-draft-button" class="action-button centered"><span class="material-icons">pause</span> Pause</button>
+          <button id="resume-draft-button" class="action-button centered" hidden><span class="material-icons">play_circle_filled</span> Resume</button>
+        </div>
       </div>
 
       <div id="draft-picks-and-prospects" class="mt-20 mb-30">
@@ -136,6 +141,7 @@
       </div>
     </div>
   </div>
+  <footer>Copyright 2022 GetDrafting.com - Scott Prelewicz</footer>
   <script src="/scripts/localforage.js"></script>
   <script src="./js/main.js" type="module"></script>
 </body>
