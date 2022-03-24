@@ -1,6 +1,6 @@
 {
    "Colts": {
-      "Primary": "QB, EDGE, OT, WR",
+      "Primary": "EDGE, OT, WR",
       "Secondary": "CB, S, EDGE, TE, DL",
       "Ancillary": "WR, RB, IOL, LB, CB",
       "Noneed": ""
@@ -84,8 +84,8 @@
       "Noneed": ""
    },
    "Bills": {
-      "Primary": "DL, CB",
-      "Secondary": "WR, IOL, RB, EDGE",
+      "Primary": "CB, WR",
+      "Secondary": "WR, IOL, RB, EDGE, DL",
       "Ancillary": "TE, QB, OT, S, LB",
       "Noneed": ""
    },
