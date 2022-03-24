@@ -4,70 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="description" content="Sports draft analysis and create your own mock drafts">
-   
-
-    <title>Get Drafting!</title>
+    <meta name="description" content="Sports draft analysis and create your own mock drafts. Sports draft simulator.">
+    <title>Get Drafting! - Create Your Own Mock Sports Drafts</title>
     <link rel="stylesheet" href="/assets/main.css">
   </head>
   <body>
-    
     <div id="page-wrapper">
-      <video playsinline autoplay muted id="bgvid">
-        <source src="assets/footballspinslow.mp4" type="video/mp4">
-      </video>
-      <div class="content center lighttext">
-        <h1 class="pt20">Get Drafting!</h1>
-        <p>Create your own mock draft and see our experts picks.</p>
-      </div>
-      <div class="form-wrapper center" id="signup-form-wrapper">
-        <form id="signup-form">
-          <p>Sign up now to be alerted when Get Drafting goes live!</p>
-          <div class="error-message" id="form-error"></div>
-          <input type="text" name="email">
-          <div class="form-button-wrapper">
-            <button class="form-button" id="signup-btn">Sign Up</button>
-          </div>
-           <p class="metatext">Presented by <a href="https://sunrisesportsreport.com/">Sunrise Sports Report</a> and <a href="https://rayonsports.com/">RayOnSports</a>.</p>
-        </form>
-      </div>
-      <footer>
-
-      </footer>
+      <header class="site-header">
+        <img src="/assets/gdlt.png">
+      </header>
+      <div id="landing-page-content" class="centered landing-page-content">
+        <img src="/assets/gdlt-blue.png" class="big-gd-logo">
+        <div class="landing-page-actions">
+          <h3>Create Your Own Mock NFL Drafts. A fun draft simulator to be like a GM.</h3>
+          <a href="/drafts" class="div-link"><div class="action-button centered">Draft Now!</div></a>
+        </div>
+      </div> 
+      <footer class="centered"> Copyright 2022 - GetDrafting.com Scott Prelewicz</footer>
     </div>
-    <script>
-      document.addEventListener('DOMContentLoaded', (event) => {
-        console.log('DOM fully loaded and parsed');
-        let btn = document.querySelector('#signup-btn');
-        btn.addEventListener('click',function(event) {
-          event.preventDefault();
-          let formData = new FormData(document.getElementById("signup-form"));
-    
-          fetch('signupemail.php', {
-            body: formData,
-            method: "post"
-          })
-          .then(response => response.text())
-          .then(response => {
-            if(response == 'Success') {
-              document.querySelector('#signup-form-wrapper').innerHTML = '';
-              var para = document.createElement("P");
-              para.innerText = "Sign up was successful. Thank you for your interest.";
-              document.querySelector('#signup-form-wrapper').appendChild(para);   
-            } else if(response == 'Duplicate') {
-              elem = document.querySelector('#form-error');
-              elem.style.display = 'block';
-              elem.innerHTML = "<p>That email already is signed up</p>";
-            } else if(response == 'Invalid email format') {
-              elem = document.querySelector('#form-error');
-              elem.style.display = 'block';
-              elem.innerHTML = "<p>Not a valid email address</p>";
-            }
-          });
-        });
-      });
-    </script>
-    <footer>2022 Scott Prelewicz</footer>
   </body>
 </html>
 

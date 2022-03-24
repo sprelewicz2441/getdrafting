@@ -10,3 +10,8 @@
   object-fit:contain;
   height:99%;
 }
+
+.centered {
+  margin: 0 auto;
+  text-align:  center;
+}
