@@ -4,6 +4,8 @@
   padding: 10px;
   max-height: 150px;
   height: 15vh;
+  display: flex;
+  flex-direction: row;
 }
 
 .site-header img {
@@ -14,4 +16,31 @@
 .centered {
   margin: 0 auto;
   text-align:  center;
+}
+
+/* MEDIA QUERIES ABOVE MOBILE HERE */
+@media only screen and (min-width: 825px) {
+  .site-header {
+    display: flex;
+    flex-direction: row;
+  }
+
+  nav ol {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+  }
+
+  nav ol li a {
+    text-decoration: none;
+    padding: 10px;
+    color: white;
+    margin: 10px;
+    font-size: large;
+    font-weight: 300;
+  }
+
+  nav ol li a:hover {
+    background-color: seagreen;
+  }
 }
