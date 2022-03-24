@@ -9,12 +9,12 @@ body, html {
 
 .landing-page-content {
   height:  100vh;
+  padding-top: 30px;
   background-color: white;
 }
 
 .big-gd-logo {
-  max-height: 200px;
-  max-width: 80vw;
+  max-height: 100px;
   margin:  10px;
   color:  gold;
 }
@@ -45,4 +45,11 @@ body, html {
 
 footer {
   max-width:  80vw;
+}
+
+/* MEDIA QUERIES ABOVE MOBILE HERE */
+@media only screen and (min-width: 825px) {
+  .site-header {
+    display: block;
+  }
 }
