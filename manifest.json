@@ -606,5 +606,22 @@
       "purpose": "any maskable",
 			"type": "image/png"
     }
-  ]
+  ],
+  "screenshots": [
+      {
+        "src": "/assets/screenshot-landing.jpg",
+        "type": "image/jpg",
+        "sizes": "720x1079"
+      },
+      {
+        "src": "/images/screenshot-mock.jpg",
+        "type": "image/jpg",
+        "sizes": "720x1079"
+      },
+      {
+        "src": "/images/screenshot-draft.jpg",
+        "type": "image/jpg",
+        "sizes": "720x1079"
+      }
+    ]
 }
