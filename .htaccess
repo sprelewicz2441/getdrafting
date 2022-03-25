@@ -1,3 +1,0 @@
-SetEnvIf Origin "(http|https)://(https://brave-sand-0d1e1301e.azurestaticapps.net/)"$ AccessControlAllowOrigin=$0
-Header set Access-Control-Allow-Origin %{AccessControlAllowOrigin}e env=AccessControlAllowOrigin
-Header merge Access-Control-Allow-Credentials "true"
