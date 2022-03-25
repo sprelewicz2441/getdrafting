@@ -2,21 +2,22 @@
 
 body, html {
   margin:  0;
-  height: 100%;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
+#landing-page-wrapper .site-header {
+  display:  none;
+}
 
 .landing-page-content {
-  height:  100vh;
   padding-top: 30px;
   background-color: white;
+  width:  90vw;
 }
 
 .big-gd-logo {
   max-height: 100px;
   margin:  10px;
-  color:  gold;
 }
 
 .action-button {
@@ -44,10 +45,7 @@ body, html {
 }
 
 footer {
-  max-width:  80vw;
-}
-
-/* MEDIA QUERIES ABOVE MOBILE HERE */
-@media only screen and (min-width: 825px) {
-  
+   position:absolute;
+   bottom:0;
+   width:99vw;
 }
