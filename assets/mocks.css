@@ -60,6 +60,7 @@ body, html {
 .player-name {
   flex-grow:  2;
   padding-left:  10px;
+  text-align: left;
 }
 
 .player-position {
