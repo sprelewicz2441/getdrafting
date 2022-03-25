@@ -87,6 +87,10 @@ body, html {
   border-radius: 0px 0px .625rem .625rem;
 }
 
+.player-profile p {
+  text-align: left;
+}
+
 .gold {
   color: gold;
 }
