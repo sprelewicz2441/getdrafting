@@ -2,23 +2,11 @@
 
 body, html {
   margin:  0;
-  width: 100vw;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
 .mocks-page-wrapper {
   display:  grid;
-  width: 100vw;
-}
-
-.site-header {
-  background: #0A0442;
-  color:  white;
-  padding: 20px;
-}
-
-.site-header img {
-  width:  20vw;
 }
 
 .mock-header {
@@ -39,7 +27,11 @@ body, html {
 }
 
 .mock-wrapper {
-  margin: 5px;
+  padding: 5px;
+}
+
+.mocks-message {
+  padding:  10px;
 }
 
 .slot-card {
@@ -102,12 +94,8 @@ body, html {
 
 /* Big screen devices (889px and above) */
 @media only screen and (min-width: 889px) {
- body {
-  max-width: 99%; 
- }
-
-  .site-header img {
-    width:  10vw;
+ .mock-wrapper {
+    max-width: 70vw;
   }
 
 }

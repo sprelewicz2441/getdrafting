@@ -20,20 +20,41 @@
   </head>
   <body>
     <div id="page-wrapper">
-      <header class="site-header" hidden>
+      <header class="site-header">
         <img src="/assets/gdlt.png">
-        <nav>
+        <nav hidden>
           <ol>
             <li><a href="/drafts">Create Your Own Mock Draft</a></li>
             <li><a href="/mocks">Our Expert Mocks</a></li>
           </ol>
         </nav>
+        <input id="toggle" type="checkbox" hidden></input>
+
+        <label for="toggle" class="hamburger" hidden>
+          <div class="top-bun"></div>
+          <div class="meat"></div>
+          <div class="bottom-bun"></div>
+        </label>
+        <div class="nav" hidden>
+          <div class="nav-wrapper">
+            <nav>
+              <a href="#">HOME</a><br>
+              <a href="#">ABOUT</a><br>
+              <a href="#">WORK</a><br>
+              <a href="#">SERVICES</a>
+            </nav>
+          </div>
+        </div>
       </header>
       <div id="landing-page-content" class="centered landing-page-content">
         <img src="/assets/gdlt-blue.png" class="big-gd-logo">
         <div class="landing-page-actions">
           <h3>Create Your Own Mock NFL Drafts. A fun draft simulator to be like a GM.</h3>
           <a href="/drafts" class="div-link"><div class="action-button centered">Draft Now!</div></a>
+        </div>
+        <div class="landing-page-actions">
+          <h3>Need some prep? Check out our ongoing series on mock drafts from our in-house experts and partners.</h3>
+          <a href="/mocks" class="div-link"><div class="action-button centered">See Our Mocks!</div></a>
         </div>
       </div> 
       <footer class="centered"> Copyright 2022 - GetDrafting.com Scott Prelewicz</footer>
