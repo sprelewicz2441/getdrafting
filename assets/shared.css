@@ -3,14 +3,14 @@
   color:  white;
   padding: 10px;
   max-height: 150px;
-  height: 15vh;
+  height: 13vh;
   display: flex;
   flex-direction: row;
 }
 
 .site-header img {
   object-fit:contain;
-  height:99%;
+  height:90%;
 }
 
 .centered {
@@ -112,11 +112,11 @@ Animations
 
 /* MEDIA QUERIES ABOVE MOBILE HERE */
 @media only screen and (min-width: 825px) {
-  /*.site-header {
+  .site-header {
     display: flex;
     flex-direction: row;
   }
-
+/*
   nav ol {
     display: flex;
     flex-direction: row;
