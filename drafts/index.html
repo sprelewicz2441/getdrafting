@@ -152,6 +152,10 @@
   </div>
   <footer class="centered">Copyright 2022 GetDrafting.com - Scott Prelewicz</footer>
   <script src="/scripts/localforage.js"></script>
-  <script src="./js/main.js" type="module"></script>
+  <script type="module">
+     import 'https://cdn.jsdelivr.net/npm/@pwabuilder/pwaupdate';
+     const el = document.createElement('pwa-update');
+     document.body.appendChild(el);
+  </script>
 </body>
 </html>
