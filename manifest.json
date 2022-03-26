@@ -614,12 +614,12 @@
         "sizes": "720x1079"
       },
       {
-        "src": "/images/screenshot-mock.jpg",
+        "src": "/assets/screenshot-mock.jpg",
         "type": "image/jpg",
         "sizes": "720x1079"
       },
       {
-        "src": "/images/screenshot-draft.jpg",
+        "src": "/assets/screenshot-draft.jpg",
         "type": "image/jpg",
         "sizes": "720x1079"
       }
