@@ -136,6 +136,7 @@ export default class Draft {
 
     if(this.round_turnovers.includes(this.draft_slot[0])) {
       this.current_round++;
+      this.addRoundBreak();
     }
 
     if(this.draft_slot[1] == this.teamGM) {
@@ -256,6 +257,11 @@ export default class Draft {
     let pick_list_parent = document.querySelector("#drafted-list");
     let pick_html = "<div class='prospect-info-row tight-row'><div>" + this.current_round + "</div><div>" + this.draft_slot[0] + "</div><div>" + this.capitalizeTeam(this.draft_slot[1]) + "</div><div>" + player.playername + "</div><div>" + player.position + "</div>";
     pick_list_parent.innerHTML += pick_html;
+  }
+
+  addRoundBreak() {
+    let pick_list_parent = document.querySelector("#drafted-list");
+    pick_list_parent.innerHTML += "<hr />";
   }
 
   addToUserPickList(player) {
