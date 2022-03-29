@@ -219,7 +219,8 @@ export default class Draft {
 
     const wt_primary = 100/primary.length;
     const wt_rank = 526 - draft_slot[0];
-    const wt_peak = 526;
+    const wt_peak = 126;
+    const wt_random = 5;
 
     if(this.current_round == 1) {
       const random_prim = Math.floor(Math.random() * primary.length);
