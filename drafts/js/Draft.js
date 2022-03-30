@@ -291,7 +291,7 @@ export default class Draft {
     document.querySelector("#draft-actions").style.display = 'none';
     document.querySelector("#available-prospect-list").style.display = 'none';
     document.querySelector("#available-prospects-tab").style.display = 'none';
-    document.querySelector("your-picks-tab").click();
+    document.querySelector("#your-picks-tab").click();
     document.querySelector("#draft-dialog").innerHTML = "Here are your draft results.";
   }
 
