@@ -7,9 +7,9 @@
   "round_pick_turnover": [
     { "round": "2", "pick": "33" },
     { "round": "3", "pick": "65" },
-    { "round": "4", "pick": "104" },
-    { "round": "5", "pick": "143" },
-    { "round": "6", "pick": "178" },
-    { "round": "7", "pick": "220" }
+    { "round": "4", "pick": "106" },
+    { "round": "5", "pick": "144" },
+    { "round": "6", "pick": "180" },
+    { "round": "7", "pick": "223" }
   ]
 }
