@@ -4,6 +4,7 @@ export default class Draft {
     this.current_pick_num = 1;
     this.current_round = 1;
     this.teamGM = '';
+    this.autopickTime = 1000;
 
     // Attach game sounds
     this.sounds = [];
@@ -20,6 +21,13 @@ export default class Draft {
     this.sounds.user_pick_sound.setAttribute("controls", "none");
     this.sounds.user_pick_sound.style.display = "none";
     document.body.appendChild(this.sounds.user_pick_sound);
+
+    this.sounds.end_sound = document.createElement("audio");
+    this.sounds.end_sound.src = '/assets/draft-end.mp3';
+    this.sounds.end_sound.setAttribute("preload", "auto");
+    this.sounds.end_sound.setAttribute("controls", "none");
+    this.sounds.end_sound.style.display = "none";
+    document.body.appendChild(this.sounds.end_sound);
   }
 
   init() {
@@ -124,7 +132,7 @@ export default class Draft {
     
     this.interval = setInterval(function() {
       self.doPick();
-    }, 1500);
+    }, this.autopickTime);
   }
 
   pauseDraft() {
@@ -133,6 +141,10 @@ export default class Draft {
 
   doPick() {
     this.draft_slot = this.getNextDraftSlot();
+
+    if(!this.draft_slot) {
+      this.endDraft();
+    }
 
     if(this.round_turnovers.includes(this.draft_slot[0])) {
       this.current_round++;
@@ -270,6 +282,17 @@ export default class Draft {
     let pick_list_parent = document.querySelector("#team-draft-list");
     let pick_html = "<div class='prospect-info-row tight-row'><div>" + this.current_round + "</div><div>" + slot[0] + "</div><div>" + player.playername + "</div><div>" + player.school + "</div><div>" + player.position + "</div></div>";
     pick_list_parent.innerHTML += pick_html;
+  }
+
+  endDraft() {
+    clearInterval(this.interval);
+    this.sounds.end_sound.play();
+    document.querySelector("#active-drafter-card").style.display = 'none';
+    document.querySelector("#draft-actions").style.display = 'none';
+    document.querySelector("#available-prospect-list").style.display = 'none';
+    document.querySelector("#available-prospects-tab").style.display = 'none';
+    document.querySelector("your-picks-tab").click();
+    document.querySelector("#draft-dialog").innerHTML = "Here are your draft results.";
   }
 
   async getData(file) {
