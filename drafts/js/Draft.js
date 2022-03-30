@@ -144,6 +144,7 @@ export default class Draft {
 
     if(!this.draft_slot) {
       this.endDraft();
+      return;
     }
 
     if(this.round_turnovers.includes(this.draft_slot[0])) {
