@@ -82,7 +82,7 @@ body, html {
 
 .player-profile {
   padding:  10px;
-  font-weight: 500;
+  font-size:  large;
   border: solid 1px #0A0442;  
   border-radius: 0px 0px .625rem .625rem;
 }
