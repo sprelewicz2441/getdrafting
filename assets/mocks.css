@@ -32,6 +32,7 @@ body, html {
 
 .mocks-message {
   padding:  10px;
+  font-size: large;
 }
 
 .slot-card {
