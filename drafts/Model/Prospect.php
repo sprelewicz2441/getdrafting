@@ -5,6 +5,6 @@ class Prospect extends Database
 {
     public function getProspects()
     {
-        return $this->select("SELECT * FROM prospects ORDER BY rank", []);
+        return $this->select("SELECT * FROM prospects ORDER BY peak, rank", []);
     }
 }
