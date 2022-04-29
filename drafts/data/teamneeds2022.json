@@ -102,8 +102,8 @@
       "Noneed": "RB"
    },
    "Falcons": {
-      "Primary": "OT, EDGE, S, WR, IOL",
-      "Secondary": "RB, TE, DL, LB, CB",
+      "Primary": "WR",
+      "Secondary": "OT, EDGE, S, RB, TE, DL, LB, CB",
       "Ancillary": "WR, QB, LB",
       "Noneed": ""
    },
