@@ -186,8 +186,8 @@
       "Noneed": "OT, TE"
    },
    "Titans": {
-      "Primary": "LB, TE, CB, OT, WR",
-      "Secondary": "DL, EDGE, QB",
+      "Primary": "WR",
+      "Secondary": "LB, TE, CB, OT, DL, EDGE, QB",
       "Ancillary": "RB, IOL, WR, CB",
       "Noneed": ""
    }
