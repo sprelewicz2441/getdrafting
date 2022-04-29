@@ -6,8 +6,8 @@
       "Noneed": ""
    },
    "Cowboys": {
-      "Primary": "EDGE, S, DL",
-      "Secondary": "TE, WR, IOL, CB",
+      "Primary": "OT",
+      "Secondary": "TE, WR, IOL, CB, EDGE, S, DL",
       "Ancillary": "OT, QB",
       "Noneed": "RB"
    },
