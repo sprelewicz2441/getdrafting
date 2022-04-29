@@ -61,7 +61,7 @@
    },
    "Jaguars": {
       "Primary": "DL",
-      "Secondary": "EDGE,S, OT, DL, IOL, TE, WR",
+      "Secondary": "EDGE, S, OT, DL, IOL, TE, WR",
       "Ancillary": "CB, LB",
       "Noneed": "QB"
    },
