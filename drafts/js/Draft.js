@@ -226,9 +226,9 @@ export default class Draft {
     let current_prospect = null;
 
     let primary = currteamneeds["Primary"].split(',');
-    let secondary = currteamneeds["Secondary"];
-    let tertiary = currteamneeds["Ancillary"];
-    let noneed = currteamneeds["Noneed"];
+    let secondary = currteamneeds["Secondary"].split(',');;
+    let tertiary = currteamneeds["Ancillary"].split(',');;
+    let noneed = currteamneeds["Noneed"].split(',');;
 
     const wt_primary = 100/primary.length;
     const wt_rank = 526 - draft_slot[0];
