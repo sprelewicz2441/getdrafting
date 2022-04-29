@@ -66,8 +66,8 @@
       "Noneed": "QB"
    },
    "Chiefs": {
-      "Primary": "WR, EDGE, S, LB, CB",
-      "Secondary": "RB, OT",
+      "Primary": "CB",
+      "Secondary": "WR, EDGE, S, LB, RB, OT",
       "Ancillary": "DL, IOL, TE",
       "Noneed": "QB"
    },
