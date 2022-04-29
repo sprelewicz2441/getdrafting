@@ -138,8 +138,8 @@
       "Noneed": "QB"
    },
    "Chargers": {
-      "Primary": "OT, EDGE, CB, DL",
-      "Secondary": "TE, LB, WR",
+      "Primary": "IOL",
+      "Secondary": "TE, LB, WR, OT, EDGE, CB, DL",
       "Ancillary": "IOL, S, RB, DL, EDGE",
       "Noneed": "QB"
    },
