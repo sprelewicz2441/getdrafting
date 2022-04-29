@@ -18,8 +18,8 @@
       "Noneed": ""
    },
    "Texans": {
-      "Primary": "EDGE, CB, S",
-      "Secondary": "QB, WR, IOL",
+      "Primary": "CB",
+      "Secondary": "QB, WR, IOL, EDGE, S",
       "Ancillary": "RB, LB, TE, CB, OT",
       "Noneed": ""
    },
