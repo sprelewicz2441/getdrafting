@@ -42,8 +42,8 @@
       "Noneed": ""
    },
    "Steelers": {
-      "Primary": "QB, IOL, OT, DL, CB",
-      "Secondary": "WR, EDGE, LB",
+      "Primary": "QB",
+      "Secondary": "WR, EDGE, LB, IOL, OT, DL, CB",
       "Ancillary": "WR, S",
       "Noneed": ""
    },
