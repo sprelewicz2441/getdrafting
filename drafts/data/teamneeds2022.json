@@ -126,8 +126,8 @@
       "Noneed": "QB, RB, DL"
    },
    "Packers": {
-      "Primary": "EDGE, OT, DL",
-      "Secondary": "QB, WR, LB, TE, IOL",
+      "Primary": "LB",
+      "Secondary": "EDGE, OT, DL, QB, WR, LB, TE, IOL",
       "Ancillary": "S, CB, RB",
       "Noneed": ""
    },
