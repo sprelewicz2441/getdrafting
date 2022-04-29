@@ -48,8 +48,8 @@
       "Noneed": ""
    },
    "Lions": {
-      "Primary": "EDGE, S, QB, WR, LB",
-      "Secondary": "CB, WR",
+      "Primary": "EDGE",
+      "Secondary": "CB, WR, S, QB, WR, LB",
       "Ancillary": "LB, S, DL, TE, RB, OT, IOL",
       "Noneed": ""
    },
@@ -60,7 +60,7 @@
       "Noneed": "DL"
    },
    "Jaguars": {
-      "Primary": "LB",
+      "Primary": "DL",
       "Secondary": "EDGE,S, OT, DL, IOL, TE, WR",
       "Ancillary": "CB, LB",
       "Noneed": "QB"
