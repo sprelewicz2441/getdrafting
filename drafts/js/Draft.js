@@ -235,7 +235,7 @@ export default class Draft {
     const wt_peak = 126;
     const wt_random = 5;
 
-    if(this.current_round == 1) {
+    if(this.current_round == 2) {
       const random_prim = Math.floor(Math.random() * primary.length);
       let current_prospect_index = this.prospects.findIndex(prospect => prospect.position == primary[random_prim].trim());
       current_prospect = this.prospects[current_prospect_index];
