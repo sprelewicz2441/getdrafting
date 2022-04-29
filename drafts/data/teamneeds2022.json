@@ -12,8 +12,8 @@
       "Noneed": "RB"
    },
    "Saints": {
-      "Primary": "WR, OT, QB",
-      "Secondary": "S, DL, TE",
+      "Primary": "WR",
+      "Secondary": "S, DL, TE, OT, QB",
       "Ancillary": "WR, IOL, CB, EDGE, LB, RB",
       "Noneed": ""
    },
