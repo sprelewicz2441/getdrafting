@@ -4,7 +4,7 @@ export default class Draft {
     this.current_pick_num = 1;
     this.current_round = 1;
     this.teamGM = '';
-    this.autopickTime = 1000;
+    this.autopickTime = 500;
 
     // Attach game sounds
     this.sounds = [];
@@ -237,33 +237,33 @@ export default class Draft {
 
     if(this.current_round == 2) {
       console.log(this.current_round);
-      const random_prim = Math.floor(Math.random() * secondary.length);
+      let random_prim = Math.floor(Math.random() * secondary.length);
       let current_prospect_index = this.prospects.findIndex(prospect => prospect.position == secondary[random_prim].trim());
       console.log(current_prospect_index);
       current_prospect = this.prospects[current_prospect_index];
       this.prospects.splice(current_prospect_index, 1);
     } else if(this.current_round == 3) {
-      const random_prim = Math.floor(Math.random() * tertiary.length);
+      let random_prim = Math.floor(Math.random() * tertiary.length);
       let current_prospect_index = this.prospects.findIndex(prospect => prospect.position == tertiary[random_prim].trim());
       current_prospect = this.prospects[current_prospect_index];
       this.prospects.splice(current_prospect_index, 1);
     } else if(this.current_round == 4) {
-      const random_prim = Math.floor(Math.random() * secondary.length);
+      let random_prim = Math.floor(Math.random() * secondary.length);
       let current_prospect_index = this.prospects.findIndex(prospect => prospect.position == secondary[random_prim].trim());
       current_prospect = this.prospects[current_prospect_index];
       this .prospects.splice(current_prospect_index, 1);
     } if(this.current_round == 5) {
-      const random_prim = Math.floor(Math.random() * tertiary.length);
+      let random_prim = Math.floor(Math.random() * tertiary.length);
       let current_prospect_index = this.prospects.findIndex(prospect => prospect.position == tertiary[random_prim].trim());
       current_prospect = this.prospects[current_prospect_index];
       this.prospects.splice(current_prospect_index, 1);
     } if(this.current_round == 6) {
-      const random_prim = Math.floor(Math.random() * secondary.length);
+      let random_prim = Math.floor(Math.random() * secondary.length);
       let current_prospect_index = this.prospects.findIndex(prospect => prospect.position == secondary[random_prim].trim());
       current_prospect = this.prospects[current_prospect_index];
       this.prospects.splice(current_prospect_index, 1);
     } if(this.current_round == 7) {
-      const random_prim = Math.floor(Math.random() * tertiary.length);
+      let random_prim = Math.floor(Math.random() * tertiary.length);
       let current_prospect_index = this.prospects.findIndex(prospect => prospect.position == tertiary[random_prim].trim());
       current_prospect = this.prospects[current_prospect_index];
       this.prospects.splice(current_prospect_index, 1);
