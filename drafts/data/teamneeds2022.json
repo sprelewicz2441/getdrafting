@@ -90,8 +90,8 @@
       "Noneed": ""
    },
    "Commanders": {
-      "Primary": "WR, CB, IOL",
-      "Secondary": "S, TE, QB",
+      "Primary": "WR",
+      "Secondary": "S, TE, QB, CB, IOL",
       "Ancillary": "LB, RB, EDGE, OT, WR, CB",
       "Noneed": "DL"
    },
