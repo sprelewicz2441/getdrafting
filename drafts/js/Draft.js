@@ -237,11 +237,8 @@ export default class Draft {
 
     if(this.current_round == 2) {
       let random_prim = Math.floor(Math.random() * secondary.length);
-      console.log(secondary[random_prim].trim());
       let current_prospect_index = this.prospects.findIndex(prospect => prospect.position == secondary[random_prim].trim());
-      console.log(this.prospects[current_prospect_index]);
       current_prospect = this.prospects[current_prospect_index];
-      console.log(current_prospect);
       this.prospects.splice(current_prospect_index, 1);
     } else if(this.current_round == 3) {
       let random_prim = Math.floor(Math.random() * tertiary.length);
@@ -253,17 +250,17 @@ export default class Draft {
       let current_prospect_index = this.prospects.findIndex(prospect => prospect.position == secondary[random_prim].trim());
       current_prospect = this.prospects[current_prospect_index];
       this .prospects.splice(current_prospect_index, 1);
-    } if(this.current_round == 5) {
+    } else if(this.current_round == 5) {
       let random_prim = Math.floor(Math.random() * tertiary.length);
       let current_prospect_index = this.prospects.findIndex(prospect => prospect.position == tertiary[random_prim].trim());
       current_prospect = this.prospects[current_prospect_index];
       this.prospects.splice(current_prospect_index, 1);
-    } if(this.current_round == 6) {
+    } else if(this.current_round == 6) {
       let random_prim = Math.floor(Math.random() * secondary.length);
       let current_prospect_index = this.prospects.findIndex(prospect => prospect.position == secondary[random_prim].trim());
       current_prospect = this.prospects[current_prospect_index];
       this.prospects.splice(current_prospect_index, 1);
-    } if(this.current_round == 7) {
+    } else if(this.current_round == 7) {
       let random_prim = Math.floor(Math.random() * tertiary.length);
       let current_prospect_index = this.prospects.findIndex(prospect => prospect.position == tertiary[random_prim].trim());
       current_prospect = this.prospects[current_prospect_index];
