@@ -36,8 +36,8 @@
       "Noneed": ""
    },
    "Jets": {
-      "Primary": "OT, EDGE, S, CB",
-      "Secondary": "TE, LB, IOL, WR, DL",
+      "Primary": "CB",
+      "Secondary": "OT, EDGE, S, TE, LB, IOL, WR, DL",
       "Ancillary": "QB, RB, IOL, WR, LB, CB, S",
       "Noneed": ""
    },
