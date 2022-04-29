@@ -54,7 +54,7 @@
       "Noneed": ""
    },
    "Giants": {
-      "Primary": "EDGE",
+      "Primary": "EDGE, OT",
       "Secondary": "LB, WR, QB, IOL, TE, RB",
       "Ancillary": "CB, S, LB, IOL",
       "Noneed": "DL"
@@ -162,8 +162,8 @@
       "Noneed": "QB"
    },
    "Panthers": {
-      "Primary": "OT, QB",
-      "Secondary": "IOL, DL, EDGE, LB, WR, TE",
+      "Primary": "OT",
+      "Secondary": "QB, IOL, DL, EDGE, LB, WR, TE",
       "Ancillary": "CB, IOL, RB",
       "Noneed": ""
    },
