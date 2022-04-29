@@ -236,10 +236,9 @@ export default class Draft {
     const wt_random = 5;
 
     if(this.current_round == 2) {
-      console.log(this.current_round);
       let random_prim = Math.floor(Math.random() * secondary.length);
+      console.log(random_prim);
       let current_prospect_index = this.prospects.findIndex(prospect => prospect.position == secondary[random_prim].trim());
-      console.log(current_prospect_index);
       current_prospect = this.prospects[current_prospect_index];
       this.prospects.splice(current_prospect_index, 1);
     } else if(this.current_round == 3) {
