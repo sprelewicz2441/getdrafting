@@ -72,8 +72,8 @@
       "Noneed": "QB"
    },
    "Ravens": {
-      "Primary": "DL, EDGE, CB, IOL",
-      "Secondary": "OT, WR, RB",
+      "Primary": "S",
+      "Secondary": "DL, EDGE, CB, IOL, OT, WR, RB",
       "Ancillary": "TE, S, LB",
       "Noneed": "QB"
    },
