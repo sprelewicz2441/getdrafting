@@ -144,8 +144,8 @@
       "Noneed": "QB"
    },
    "Vikings": {
-      "Primary": "S, DL, CB, QB",
-      "Secondary": "WR, LB, EDGE",
+      "Primary": "S",
+      "Secondary": "WR, LB, EDGE, DL, CB, QB",
       "Ancillary": "IOL, OT, TE, CB",
       "Noneed": "RB"
    },
