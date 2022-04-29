@@ -240,6 +240,31 @@ export default class Draft {
       let current_prospect_index = this.prospects.findIndex(prospect => prospect.position == primary[random_prim].trim());
       current_prospect = this.prospects[current_prospect_index];
       this.prospects.splice(current_prospect_index, 1);
+    } else if(this.current_round == 3) {
+      const random_prim = Math.floor(Math.random() * tertiary.length);
+      let current_prospect_index = this.prospects.findIndex(prospect => prospect.position == primary[random_prim].trim());
+      current_prospect = this.prospects[current_prospect_index];
+      this.prospects.splice(current_prospect_index, 1);
+    } else if(this.current_round == 4) {
+      const random_prim = Math.floor(Math.random() * secondary.length);
+      let current_prospect_index = this.prospects.findIndex(prospect => prospect.position == primary[random_prim].trim());
+      current_prospect = this.prospects[current_prospect_index];
+      this .prospects.splice(current_prospect_index, 1);
+    } if(this.current_round == 5) {
+      const random_prim = Math.floor(Math.random() * tertiary.length);
+      let current_prospect_index = this.prospects.findIndex(prospect => prospect.position == primary[random_prim].trim());
+      current_prospect = this.prospects[current_prospect_index];
+      this.prospects.splice(current_prospect_index, 1);
+    } if(this.current_round == 6) {
+      const random_prim = Math.floor(Math.random() * secondary.length);
+      let current_prospect_index = this.prospects.findIndex(prospect => prospect.position == primary[random_prim].trim());
+      current_prospect = this.prospects[current_prospect_index];
+      this.prospects.splice(current_prospect_index, 1);
+    } if(this.current_round == 7) {
+      const random_prim = Math.floor(Math.random() * tertiary.length);
+      let current_prospect_index = this.prospects.findIndex(prospect => prospect.position == primary[random_prim].trim());
+      current_prospect = this.prospects[current_prospect_index];
+      this.prospects.splice(current_prospect_index, 1);
     } else {
       // FOR NOW
       current_prospect = this.prospects.shift();
